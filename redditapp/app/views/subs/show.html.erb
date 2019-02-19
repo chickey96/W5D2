@@ -1,0 +1,19 @@
+<h1><%=@sub.title%></h1>
+<h2><%=@sub.description%></h2>
+
+
+<form action="<%=subs_url(@sub)%>" method="POST">
+  <input type="hidden" name="_method" value="DELETE">
+  <input type="hidden" name="authenticity_token" 
+  value="<%=form_authenticity_token%>">
+
+  <input type="submit" value="Delete Sub">
+</form>
+
+<br><br>
+
+<a href="<%=edit_sub_url%>">Edit Sub</a>
+
+<br><br>
+
+<a href="<%=subs_url%>">Back to all Subs</a>
